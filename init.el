@@ -107,6 +107,20 @@
 
 ;;org-mode 代码高亮
 (setq org-src-fontify-natively t)
+;;org 模式美化
+;; 打开 org-indent mode
+(setq org-startup-indented t)
+
+;; 设置 bullet list
+
+;; 设置 todo keywords
+(setq org-todo-keywords
+      '((sequence "TODO" "HAND" "|" "DONE")))
+;;todo keywords 增加背景色
+(setf org-todo-keyword-faces
+      '(("TODO" . (:foreground "white" :background "#95A5A6"   :weight bold))
+        ("HAND" . (:foreground "white" :background "#2E8B57"  :weight bold))
+        ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
 
 
 ;;默认全屏
