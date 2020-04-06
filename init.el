@@ -30,6 +30,7 @@
 		monokai-theme
 	       
 		;; solarized-theme
+		org-bullets
 		org-preview-html
 		) "Default packages")
 
@@ -123,6 +124,23 @@
         ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
 
 
+;;默认 utf8 编码
+(prefer-coding-system       'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
+; use org-bullets-mode for utf8 symbols as org bullets
+(require 'org-bullets)
+;; make available "org-bullet-face" such that I can control the font size individually
+(setq org-bullets-face-name (quote org-bullet-face))
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(setq org-bullets-bullet-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
+;;select org-ellipsis symbols
+(setq org-ellipsis "⚡⚡⚡");; ⤵ ≫
+
+
+(setq default-buffer-file-coding-system 'utf-8)
 ;;默认全屏
 (setq initial-frame-alist (quote ((fullscreen .maximized))))
 ;;启动括号匹配
