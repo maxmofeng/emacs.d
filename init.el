@@ -21,12 +21,16 @@
 		;; --- Major Mode ---
 		js2-mode
 		web-mode
+		php-mode
+		htmlize
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
 		;; --- Themes ---
 		monokai-theme
+	       
 		;; solarized-theme
+		org-preview-html
 		) "Default packages")
 
  (setq package-selected-packages my/packages)
@@ -100,6 +104,9 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 ;;绑定recentf快捷键
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
+;;org-mode 代码高亮
+(setq org-src-fontify-natively t)
 
 
 ;;默认全屏
