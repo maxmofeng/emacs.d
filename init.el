@@ -24,6 +24,7 @@
 		php-mode
 ;;		prolog-mode
 		htmlize
+		kotlin-mode
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
@@ -31,6 +32,12 @@
 		monokai-theme
 	       
 		;; solarized-theme
+
+
+		;;org-mode-plugins
+		ess
+		ob-kotlin
+		;;ob-julia
 		org-bullets
 		org-preview-html
 
