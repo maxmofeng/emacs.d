@@ -22,6 +22,7 @@
 		js2-mode
 		web-mode
 		php-mode
+;;		prolog-mode
 		htmlize
 		;; --- Minor Mode ---
 		nodejs-repl
@@ -32,6 +33,9 @@
 		;; solarized-theme
 		org-bullets
 		org-preview-html
+
+		;;org-mode
+		ob-prolog
 		) "Default packages")
 
  (setq package-selected-packages my/packages)
@@ -68,7 +72,10 @@
 (tool-bar-mode -1)
 
 ;;关闭文件滑动控件
-(scroll-bar-mode -1)`
+(scroll-bar-mode -1)
+
+;;自动换行
+(global-visual-line-mode 1)
 
 ;;显示行号
 (global-linum-mode 1)
@@ -157,6 +164,8 @@
 
 ;;开启全局Company 补全
 (global-company-mode 1)
+;;取消 company 补全的全局小写
+(setq company-dabbrev-downcase nil)
 
 ;;启用js2-mode 替换js-mode
 (setq auto-mode-alist
